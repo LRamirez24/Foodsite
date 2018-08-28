@@ -85,7 +85,87 @@
     </div>
 
 
+    <!-- Button trigger modal -->
 
+
+<!-- Modal -->
+<div class="modal fade" id="reservetable" tabindex="-1" role="dialog" aria-labelledby="reservetable" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="reservetable">Reserve Table</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+            <div class="form-group row">
+                <label for="numberofguest" class="col-sm-2 col-form-label">
+                    Number of Guests
+                </label>
+                <div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+  <label class="form-check-label" for="inlineRadio1">1</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+  <label class="form-check-label" for="inlineRadio2">2</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+  <label class="form-check-label" for="inlineRadio3">3</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+  <label class="form-check-label" for="inlineRadio3">4</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+  <label class="form-check-label" for="inlineRadio3">5</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+  <label class="form-check-label" for="inlineRadio3">6</label>
+</div>
+            </div>
+
+            <div class="form-group row">
+                <label for="section" class="col-sm-2 col-form-label">
+                    Section
+                </label>
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-success bt-lg">
+                        <input type="radio" name="options" id="nonsmoking" autocomplete="off"> Non-Smoking
+                    </label>
+                    <label class="btn btn-danger bt-sm">
+                        <input type="radio" name="options" id="smoking" autocomplete="off"> Smoking
+                    </label>
+                </div>
+            </div>
+            
+            <div class="form-group row">
+                <label for="dateandtime" class="col-sm-2 col-form-label">
+                    Date and Time
+                </label>
+                 <div class="col">
+      <input type="text" class="form-control" placeholder="Date">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Time">
+    </div>
+            </div>
+
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary">Reserve</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
@@ -100,11 +180,9 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm align-self-center">
-                   <a role="button" class="btn btn-block nav-link btn-warning"
-                        data-toggle="tooltip" data-html="true"  title="Or Call us at  <br><strong>+852 12345678</strong>"
-                        data-placement="bottom" href="#bottom">Reserve Table</a>
-                </div>
-
+                   <button type="button" data-html="true" class="btn btn-block nav-link btn-warning" data-toggle="modal" data-target="#reservetable">
+                   Reserve Table</button>
+               </div>
             </div>
         </div>
     </header>
@@ -329,11 +407,7 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>
+   
 </body>
 
 </html>
