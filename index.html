@@ -21,6 +21,7 @@
 
 <body>
 
+    <!-- NavBar -->
     <nav class="navbar navbar-dark navbar-expand-sm  fixed-top">
         <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
@@ -37,7 +38,7 @@
         </ul>
         
         <span class="navbar-text">
-            <a data-toggle="modal" data-target="#loginModal">
+            <a id="loginBtn">
                 <span class="fa fa-sign-in"></span> Login</a>
         </span>
 
@@ -46,17 +47,21 @@
     </nav>
 
 
-    <div id="loginModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" role="document">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="model-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                     <form>
+
+
+
+<!-- Login Modals -->
+<div class="modal fade" id="loginModals" tabindex="-1" role="dialog" aria-labelledby="loginModals" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModals">Login</h5>
+        <button id="closeBtn" type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
                         <div class="form-row">
                             <div class="form-group col-sm-4">
                                     <label class="sr-only" for="exampleInputEmail3">Email address</label>
@@ -79,22 +84,24 @@
                             <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
                         </div>
                     </form>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
+  </div>
+</div>
 
 
-    <!-- Button trigger modal -->
+    
+
+    
 
 
-<!-- Modal -->
+<!-- Reserve Table Modal -->
 <div class="modal fade" id="reservetable" tabindex="-1" role="dialog" aria-labelledby="reservetable" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="reservetable">Reserve Table</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button id="closeBtn" type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -155,20 +162,18 @@
       <input type="text" class="form-control" placeholder="Time">
     </div>
             </div>
-
-
         </form>
-      </div>
-      <div class="modal-footer">
+        <div class="offset-sm-2">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
         <button type="button" class="btn btn-primary">Reserve</button>
+    </div>
       </div>
     </div>
   </div>
 </div>
 
 
-
+    <!-- Jumbotron -->
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -180,13 +185,13 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm align-self-center">
-                   <button type="button" data-html="true" class="btn btn-block nav-link btn-warning" data-toggle="modal" data-target="#reservetable">
+                   <button type="button"  class="btn btn-block nav-link btn-warning" id="reserve">
                    Reserve Table</button>
                </div>
             </div>
         </div>
     </header>
-
+    <!-- Carousel -->
     <div class="container">
         <div class="row row-content">
             <div class="col">
@@ -244,7 +249,7 @@
                 </div>
             </div>
         </div>
-
+        <!-- Info Section -->
         <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 order-sm-last col-md-3">
                 <h3>Our Lipsmacking Culinary Creations</h3>
@@ -298,7 +303,7 @@
     </div>
 
 
-
+    <!-- ReserveTable Card -->
     <div class="container">
     <div class="row row-content align-items-center">
         <div class="col-12 col-sm-8 offset-sm-2 align-self-center ">
@@ -365,7 +370,7 @@
 
 
 
-
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="row">             
@@ -412,6 +417,7 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+   <!-- jQuery -->
    <script>
        $(document).ready(function() {
         $('#mycarousel').carousel({interval: 2000});
@@ -428,6 +434,20 @@
             }
         });
        });
+
+       $(document).ready(function(){
+    $("#reserve").click(function(){
+        $("#reservetable").modal();
+    });
+});
+
+              $(document).ready(function(){
+    $("#loginBtn").click(function(){
+        $("#loginModals").modal();
+    });
+});
+
+
    </script>
 </body>
 

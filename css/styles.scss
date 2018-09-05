@@ -2,6 +2,7 @@ $lt-gray: #ddd;
 $background-dark: #512DA8;
 $background-light: #9575CD;
 $background-pale: #D1C4E9;
+$background-gold: #FFA500;
 
 // Height variables
 $carousel-item-height: 300px;
@@ -68,9 +69,28 @@ body{
     }
 }
 
+
 #carouselButton {
     right:0px;
     position: absolute;
     bottom: 0px;
 }
 
+.card {
+    .card-header {
+     background:$background-gold;
+    }
+}
+
+.modal-header {
+    background:$background-dark;
+    color:floralwhite;
+
+    .close {
+    color:floralwhite;
+    }
+}
+
+.modal-body {
+    background:$background-pale;
+}
