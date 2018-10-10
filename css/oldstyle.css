@@ -52,21 +52,15 @@ body {
   position: absolute;
   bottom: 0px; }
 
-.card .card-header {
-  background-color: #FFA500; 
-}
+.modal-header {
+  background: #512DA8;
+  color: floralwhite; }
+  .modal-header .close {
+    color: floralwhite; }
 
 .modal-body {
-  background-color: #D1C4E9;
-}
+  background: #D1C4E9; }
 
-.modal-footer {
-  background-color: #D1C4E9;
-}
-
-.modal-header {
-  background-color: #512DA8;
-}
-.modal-title {
-  color: #FFFFFF;
+.card .card-header {
+  background-color: #FFA500; 
 }
